@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+
+struct NewsTableViewModel{
+    
+}
+
+struct NewsViewModel {
+    
+}
