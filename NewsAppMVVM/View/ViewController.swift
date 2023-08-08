@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var newsTableView: UITableView!
-    var news = [News]()
+    var newsTableViewModel : NewsTableViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,32 +18,41 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         newsTableView.delegate = self
         newsTableView.dataSource = self
         
+        newsTableView.rowHeight = UITableView.automaticDimension
+        newsTableView.estimatedRowHeight = UITableView.automaticDimension
+        
+        getData()
+    }
+    
+    func getData (){
         let url = URL(string: "https://raw.githubusercontent.com/atilsamancioglu/BTK-iOSDataSet/master/dataset.json")
         
         Webservice().getNews(url: url!) { news in
-            if let news = news{
-                self.news.removeAll(keepingCapacity: false)
-                for new in news{
-                    self.news.append(News(title: new.title , story: new.story))
+                if let news = news{
+                    self.newsTableViewModel = NewsTableViewModel(newsList: news)
+                    DispatchQueue.main.async {
+                        self.newsTableView.reloadData()
+                    }
+                    print("succeded")
+                }else{
+                    self.showErrorMessage(titleInput: "Error", messageInput: "an error has occured")
                 }
-
-                print("succeded")
-            }else{
-                self.showErrorMessage(titleInput: "Error", messageInput: "an error has occured")
-            }
         }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return news.count
+        return newsTableViewModel == nil ? 0 : self.newsTableViewModel.numberOfRowsInSection()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = newsTableView.dequeueReusableCell(withIdentifier: "newsCell",for: indexPath) as! NewsTableViewCell
-        cell.cellHeader.text = news[indexPath.row].title
-        cell.cellParagraph.text = news[indexPath.row].story
-        self.newsTableView.reloadData()
+        let newsViewModel = self.newsTableViewModel.newsAtIndexPath(indexPath.row)
+        cell.cellHeader.text = newsViewModel.title
+        cell.cellParagraph.text = newsViewModel.story
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
     func showErrorMessage(titleInput : String , messageInput : String){
