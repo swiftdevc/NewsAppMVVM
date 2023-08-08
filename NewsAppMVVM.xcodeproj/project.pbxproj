@@ -14,6 +14,8 @@
 		D28D5A832A829B5E009AD446 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28D5A822A829B5E009AD446 /* Assets.xcassets */; };
 		D28D5A862A829B5E009AD446 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28D5A842A829B5E009AD446 /* LaunchScreen.storyboard */; };
 		D28D5A8E2A82A307009AD446 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D5A8D2A82A307009AD446 /* NewsTableViewCell.swift */; };
+		D28D5A942A82AA45009AD446 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D5A932A82AA45009AD446 /* News.swift */; };
+		D28D5A962A82AE90009AD446 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D5A952A82AE90009AD446 /* Webservice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D28D5A852A829B5E009AD446 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D28D5A872A829B5E009AD446 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D28D5A8D2A82A307009AD446 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		D28D5A932A82AA45009AD446 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		D28D5A952A82AE90009AD446 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,50 @@
 		D28D5A782A829B5C009AD446 /* NewsAppMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				D28D5A792A829B5C009AD446 /* AppDelegate.swift */,
-				D28D5A7B2A829B5C009AD446 /* SceneDelegate.swift */,
-				D28D5A7D2A829B5C009AD446 /* ViewController.swift */,
+				D28D5A922A82AA32009AD446 /* ViewModel */,
+				D28D5A912A82AA23009AD446 /* Service */,
+				D28D5A902A82AA1C009AD446 /* Model */,
+				D28D5A8F2A82AA15009AD446 /* View */,
 				D28D5A7F2A829B5C009AD446 /* Main.storyboard */,
 				D28D5A822A829B5E009AD446 /* Assets.xcassets */,
 				D28D5A842A829B5E009AD446 /* LaunchScreen.storyboard */,
 				D28D5A872A829B5E009AD446 /* Info.plist */,
-				D28D5A8D2A82A307009AD446 /* NewsTableViewCell.swift */,
 			);
 			path = NewsAppMVVM;
+			sourceTree = "<group>";
+		};
+		D28D5A8F2A82AA15009AD446 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D28D5A792A829B5C009AD446 /* AppDelegate.swift */,
+				D28D5A7B2A829B5C009AD446 /* SceneDelegate.swift */,
+				D28D5A8D2A82A307009AD446 /* NewsTableViewCell.swift */,
+				D28D5A7D2A829B5C009AD446 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D28D5A902A82AA1C009AD446 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D28D5A932A82AA45009AD446 /* News.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D28D5A912A82AA23009AD446 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D28D5A952A82AE90009AD446 /* Webservice.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		D28D5A922A82AA32009AD446 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +181,9 @@
 			files = (
 				D28D5A7E2A829B5C009AD446 /* ViewController.swift in Sources */,
 				D28D5A7A2A829B5C009AD446 /* AppDelegate.swift in Sources */,
+				D28D5A962A82AE90009AD446 /* Webservice.swift in Sources */,
 				D28D5A8E2A82A307009AD446 /* NewsTableViewCell.swift in Sources */,
+				D28D5A942A82AA45009AD446 /* News.swift in Sources */,
 				D28D5A7C2A829B5C009AD446 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
