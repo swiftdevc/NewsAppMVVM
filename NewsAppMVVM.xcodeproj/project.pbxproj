@@ -16,7 +16,7 @@
 		D28D5A8E2A82A307009AD446 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D5A8D2A82A307009AD446 /* NewsTableViewCell.swift */; };
 		D28D5A942A82AA45009AD446 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D5A932A82AA45009AD446 /* News.swift */; };
 		D28D5A962A82AE90009AD446 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D5A952A82AE90009AD446 /* Webservice.swift */; };
-		D28D5A982A82E208009AD446 /* NewsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D5A972A82E208009AD446 /* NewsTableViewModel.swift */; };
+		D28D5A982A82E208009AD446 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28D5A972A82E208009AD446 /* NewsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		D28D5A8D2A82A307009AD446 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		D28D5A932A82AA45009AD446 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		D28D5A952A82AE90009AD446 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
-		D28D5A972A82E208009AD446 /* NewsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewModel.swift; sourceTree = "<group>"; };
+		D28D5A972A82E208009AD446 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 		D28D5A922A82AA32009AD446 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D28D5A972A82E208009AD446 /* NewsTableViewModel.swift */,
+				D28D5A972A82E208009AD446 /* NewsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 				D28D5A7E2A829B5C009AD446 /* ViewController.swift in Sources */,
 				D28D5A7A2A829B5C009AD446 /* AppDelegate.swift in Sources */,
 				D28D5A962A82AE90009AD446 /* Webservice.swift in Sources */,
-				D28D5A982A82E208009AD446 /* NewsTableViewModel.swift in Sources */,
+				D28D5A982A82E208009AD446 /* NewsViewModel.swift in Sources */,
 				D28D5A8E2A82A307009AD446 /* NewsTableViewCell.swift in Sources */,
 				D28D5A942A82AA45009AD446 /* News.swift in Sources */,
 				D28D5A7C2A829B5C009AD446 /* SceneDelegate.swift in Sources */,
